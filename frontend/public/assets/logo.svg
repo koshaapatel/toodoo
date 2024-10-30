@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Checkmark -->
+  <path d="M20 50 L40 70 L80 30" stroke="#4b5563" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round" />
+  
+  <!-- TODO text -->
+  <text x="50" y="85" font-family="Arial, sans-serif" font-size="24" font-weight="bold" text-anchor="middle" fill="#4b5563">TODO</text>
+</svg>

@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: backend
+    restart: unless-stopped
+    ports:
+      - "3001:3001"
+    networks:
+      - toodoo-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: frontend
+    restart: unless-stopped
+    ports:
+      - "9117:3000"
+    depends_on:
+      - backend
+    networks:
+      - toodoo-network
+
+networks:
+  toodoo-network:
+    driver: bridge
